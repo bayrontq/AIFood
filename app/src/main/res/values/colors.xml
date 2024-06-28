@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="blue_aifood">#87AFCD</color>
+
+    <color name="color_d3ebff">#D3EBFF</color>
+    <color name="color_2c4c62">#2C4C62</color>
 </resources>

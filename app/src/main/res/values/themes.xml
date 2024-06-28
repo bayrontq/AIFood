@@ -1,8 +1,15 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.AIFood" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/color_d3ebff</item>
+        <item name="colorPrimaryDark">@color/color_2c4c62</item>
+        <item name="colorAccent">@color/color_2c4c62</item>
+
+        <item name="android:textColorPrimary">@color/color_2c4c62</item>
+        <item name="android:textColorSecondary">@color/color_2c4c62</item>
+        <item name="android:textColorTertiary">@color/color_d3ebff</item>
+
+        <item name="android:windowBackground">@color/blue_aifood</item>
     </style>
 
     <style name="Theme.AIFood" parent="Base.Theme.AIFood" />
