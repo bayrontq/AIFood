@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
 
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -59,7 +61,7 @@ secrets {
 
 dependencies {
 
-    // Exemplo de uso do novo estilo de importação de dependências
+    // Exemplos de uso do novo estilo de importação de dependências
     // Os números das versões ficam no arquivo libs.versions.toml
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -71,7 +73,16 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    // Exemplo de uso do estilo "tradiconal" de importação de dependências
+    // DataStore
+    implementation(libs.androidx.datastore.preferences)
+
+    //Dagger - Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.androidx.hilt.lifecycle.viewmodel)
+
+    // Exemplos de uso do estilo "tradiconal" de importação de dependências
+    // OpenAI
     implementation(platform("com.aallam.openai:openai-client-bom:3.8.1"))
     implementation("com.aallam.openai:openai-client")
     runtimeOnly("io.ktor:ktor-client-okhttp")

@@ -6,12 +6,14 @@ import com.aallam.openai.api.logging.LogLevel
 import com.aallam.openai.client.LoggingConfig
 import com.aallam.openai.client.OpenAI
 import com.bayron.aifood.BuildConfig
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class App : Application() {
 
     /*
      * Objeto criado neste local para exemplificar uma chamada de método usando o
-     * Design Pattern Singleton.
+     * Design Pattern Singleton (Poderia ser criado usando DI).
      */
     private lateinit var openAI: OpenAI
 
