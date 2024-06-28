@@ -5,13 +5,12 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.first
-import javax.inject.Inject
 
 private val Context.dataStore by preferencesDataStore(
     name = "preferences_data_store"
 )
 
-class DataStoreRepositoryImpl @Inject constructor(
+class DataStoreRepositoryImpl(
     private val context: Context
 ) : DataStoreRepository {
 

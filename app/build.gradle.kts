@@ -4,17 +4,16 @@ plugins {
 
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
     id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
 }
 
 android {
     namespace = "com.bayron.aifood"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.bayron.aifood"
         minSdk = 21
-        targetSdk = 35
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -41,6 +40,7 @@ android {
         buildConfig = true
         viewBinding = true
     }
+    buildToolsVersion = "34.0.0"
 }
 
 // Configurações para ocultar as chaves de APIs utilizando o plug-in Secrets Gradle
@@ -76,14 +76,13 @@ dependencies {
     // DataStore
     implementation(libs.androidx.datastore.preferences)
 
-    //Dagger - Hilt
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
-    implementation(libs.androidx.hilt.lifecycle.viewmodel)
-
     // Exemplos de uso do estilo "tradiconal" de importação de dependências
     // OpenAI
     implementation(platform("com.aallam.openai:openai-client-bom:3.8.1"))
     implementation("com.aallam.openai:openai-client")
     runtimeOnly("io.ktor:ktor-client-okhttp")
+}
+
+kapt {
+    correctErrorTypes = true
 }

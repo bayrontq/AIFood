@@ -22,7 +22,13 @@
         tools:layout="@layout/fragment_second">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SecondFragment_to_MainActvity"
+            app:destination="@id/MainActvity" />
     </fragment>
+
+    <activity
+        android:id="@+id/MainActvity"
+        android:name="com.bayron.aifood.presentation.activity.MainActivity"
+        android:label="@string/main_activity_label"
+        tools:layout="@layout/activity_main" />
 </navigation>
